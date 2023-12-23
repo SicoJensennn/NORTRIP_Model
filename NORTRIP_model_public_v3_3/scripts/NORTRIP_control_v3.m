@@ -17,12 +17,12 @@ clear
 %Set these to specify root path, model run info path and directory delimiter
 %--------------------------------------------------------------------------
     %Directory delimiter which is different for windows or linux
-    dir_del='\'; %Windows
-    %dir_del='/'; %Linux
+     %Windows
+    dir_del='/'; %Linux
 
     %Set the default user path
     %root_path='C:\NORTRIP\NORTRIP_model_public_v3_2\';
-    root_path=['D:',dir_del,'NORTRIP',dir_del,'NORTRIP_model_public_v3_3',dir_del];
+    root_path=['/uufs/chpc.utah.edu/common/home/haskins-group1/users/szhao/NORTRIP/model_github/NORTRIP_Model/NORTRIP_model_public_v3_3/'];
     userpath(root_path);
     cd(root_path);
 
@@ -62,7 +62,7 @@ clear
 %Reading from text files is quicker. If selected then will automatically
 %replace '.xlsx' with '.txt' on the file names
 %--------------------------------------------------------------------------
-    read_inputs_from_text=0;
+    read_inputs_from_text=1;
     %Set the individual reading flags based on read_inputs_from_text
     %Provides flexibility in what is read from text or from excel
     if read_inputs_from_text,
