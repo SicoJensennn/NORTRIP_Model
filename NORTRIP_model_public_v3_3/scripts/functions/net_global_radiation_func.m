@@ -1,0 +1,63 @@
+function [SOLAR_NET R_NET] = net_global_radiation_func(LAT,LON,date_num,DIFUTC_H,Z_SURF,N_CLOUD,Z_CLOUD,ALBEDO,TC)
+%INPUT SHOULD BE SINGLE NUMBERS
+
+%LAT,LON,JULIAN_DAY,TIME_S,DIFUTC_H,Z_SURF,N_CLOUD,TSC,QSC)
+
+%C	DETERMINE SHORT WAVE FLUXES ON A HORIZONTAL SURFACE
+SECPHOUR=3600.;
+SECPDAY=86400.;
+PI=3.14159/180.;
+S0=1367.;
+T0C=273.15;
+SIGMA=5.67E-8;
+
+for i=1:length(date_num),
+[Y, M, D, H, MN, S] = datevec(date_num(i));
+JULIAN_DAY=floor(date_num(i)-datenum(Y, 0, 0, 0, 0, 0)+1);
+TIME_S=(date_num(i)-datenum(Y, M, D, 0, 0, 0))*24*3600;
+
+	DAYANG=360./365.*(JULIAN_DAY-1.);
+	DEC=0.396-22.91*cos(PI*DAYANG)+4.025*sin(PI*DAYANG);
+	EQTIME=(1.03+25.7*cos(PI*DAYANG)-440.*sin(PI*DAYANG)-201.*cos(2.*PI*DAYANG)-562.*sin(2.*PI*DAYANG))./SECPHOUR;
+	SOLARTIME=mod(TIME_S+SECPDAY+SECPHOUR*(LON/15.+DIFUTC_H+EQTIME),SECPDAY);
+	HOURANG=15.*(12.-SOLARTIME/SECPHOUR);
+    
+%	SET AZIMUTH ANGLE FOR ATMOSPHERIC CORRECTIONS
+	AZT=sin(PI*DEC).*sin(PI*LAT)+cos(PI*DEC).*cos(PI*LAT).*cos(PI*HOURANG);
+	if (abs(AZT)<1),
+	  AZ=acos(AZT)/PI;
+    else
+	  AZ=0.;
+    end
+    
+%	CORRECTIONS FOR ATMOSPHERE AND CLOUD FROM OERLEMANS (GREENLAND)
+%These need to be updated
+	TAU_A=(0.75+6.8E-5*Z_SURF-7.1E-9*Z_SURF^2).*(1-.001*AZ);
+    TAU_C=1-0.78.*N_CLOUD^2*exp(-8.5E-4*Z_SURF);
+
+%	SET DAY BEGINNING AND END
+	if abs(tan(PI*DEC)*tan(PI*LAT))<1,
+	  DAY_BIG=(12.-acos(-tan(PI*DEC)*tan(PI*LAT))/PI/15.)*SECPHOUR;
+	  DAY_END=(12.+acos(-tan(PI*DEC)*tan(PI*LAT))/PI/15.)*SECPHOUR;
+    else
+	  DAY_BIG=0.;
+	  DAY_END=24.*SECPHOUR;
+    end
+%	DETERMINE SOLAR RADIATION AT SURFACE DURING DAY
+	if ((SOLARTIME>DAY_BIG)&&(SOLARTIME<DAY_END)),
+	  SOLAR_IN(i)=S0*TAU_A*TAU_C*cos(AZ*PI);
+    else
+	  SOLAR_IN(i)=0.;
+    end
+    SOLAR_NET(i)=SOLAR_IN(i)*(1-ALBEDO);
+	%if (SOLARNEW<0) then
+    %    SOLARNEW=0.
+    %end
+
+    %   NET LONG WAVE RADITION
+    R_NET(i)=-SIGMA*(T0C+TC).^4*(1-0.94e-5*(T0C+TC).^2);%GARRET
+    R_NET(i)=R_NET(i)+0.3*1.0*SIGMA*N_CLOUD*(T0C+TC-Z_CLOUD*0.006).^4;%GARRET
+    
+end
+end
+

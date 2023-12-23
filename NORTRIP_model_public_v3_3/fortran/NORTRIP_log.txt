@@ -1,0 +1,782 @@
+================================================================
+Reading model path and file names (read_NORTRIP_pathnames)
+================================================================
+              Model input parameter path = C:\NORTRIP\NORTRIP_model_public_v3_2\model_parameters\text\
+                Model parameter filename = Road_dust_parameter_table_v5
+                   Model input data path = C:\NORTRIP\NORTRIP_model_public_v3_2\input_data\text\
+               Model input data filename = NORTRIP_input_data_example
+                  Model output data path = C:\NORTRIP\NORTRIP_model_public_v3_2\output_data\text\
+              Model output data filename = 
+WARNING: No match found to "Model init data path" in input files. Returning empty string
+WARNING: No match found to "Model init data filename" in input files. Returning empty string
+WARNING: No match found to "Model output emission path" in input files. Returning empty string
+WARNING: No match found to "Model output emission filename" in input files. Returning empty string
+WARNING: No match found to "Model output gridded emission filename" in input files. Returning empty string
+WARNING: No match found to "Model output road meteo path" in input files. Returning empty string
+WARNING: No match found to "Model output road meteo filename" in input files. Returning empty string
+                      Model fortran path = C:\NORTRIP\NORTRIP_model_public_v3_2\fortran\
+               Model fortran output path = C:\NORTRIP\NORTRIP_model_public_v3_2\fortran\output\
+               Model output figures path = C:\NORTRIP\NORTRIP_model_public_v3_2\output_figures\
+                         Model ospm path = C:\NORTRIP\NORTRIP_model_public_v3_2\ospm\
+================================================================
+Reading model parameters (read_NORTRIP_parameters)
+================================================================
+----------------------------------------------------------------
+Road wear                                       	                        	                        	                        	                        	
+----------------------------------------------------------------
+                              Heavy (he) =   1.44E+01  7.20E-01  7.20E-01
+                              Light (li) =   2.88E+00  1.44E-01  1.44E-01
+       W=W0*(a1+a2*(max[V,Vmin]/Vref)a3) =   0.00E+00  1.00E+00  1.00E+00  7.00E+01  3.00E+01
+----------------------------------------------------------------
+Tyre wear                                       	                        	                        	                        	                        	
+----------------------------------------------------------------
+                              Heavy (he) =   5.00E-01  5.00E-01  5.00E-01
+                              Light (li) =   1.00E-01  1.00E-01  1.00E-01
+       W=W0*(a1+a2*(max[V,Vmin]/Vref)a3) =   0.00E+00  1.00E+00  1.00E+00  7.00E+01  3.00E+01
+----------------------------------------------------------------
+Brake wear                                      	                        	                        	                        	                        	
+----------------------------------------------------------------
+                              Heavy (he) =   5.00E-02  5.00E-02  5.00E-02
+                              Light (li) =   1.00E-02  1.00E-02  1.00E-02
+       W=W0*(a1+a2*(max[V,Vmin]/Vref)a3) =   1.00E+00  0.00E+00  0.00E+00  1.00E+02  3.00E+01
+----------------------------------------------------------------
+Snow depth wear threshold                       	                        	                        	                        	                        	
+----------------------------------------------------------------
+              sroadwear,thresh (mm w.e.) =   5.00E+00
+----------------------------------------------------------------
+Pavement type scaling factor                    	                        	                        	                        	                        	
+----------------------------------------------------------------
+                Number of pavement types =         10
+ 1                            Hornsgatan =   0.98E+00
+ 2                       Mannerheimintie =   0.10E+01
+ 3                          Essingeleden =   0.98E+00
+ 4                                   RV4 =   0.16E+01
+ 5                             NB_sletta =   0.10E+01
+ 6                      HCAB_before_2008 =   0.40E+01
+ 7                              Runeberg =   0.10E+01
+ 8                       HCAB_after_2008 =   0.20E+01
+ 9                             Stavanger =   0.10E+01
+10                                Finish =   0.98E+00
+----------------------------------------------------------------
+Driving cycle scaling factor                    	                        	                        	                        	                        	
+----------------------------------------------------------------
+           Number of driving cycle types =          4
+ 1                             Reference =   0.10E+01
+ 2                                 Urban =   0.15E+01
+ 3                               Highway =   0.50E+00
+ 4                             Congested =   0.20E+01
+----------------------------------------------------------------
+Suspension scaling factors                      	                        	                        	                        	                        	
+----------------------------------------------------------------
+                             h0,roadwear =   1.00E+00  1.00E+00  1.00E+00  1.00E+00
+                             h0,tyrewear =   1.00E+00  1.00E+00  1.00E+00  1.00E+00
+                            h0,brakewear =   1.00E+00  1.00E+00  1.00E+00  1.00E+00
+                                 h0,sand =   1.00E+02  1.00E+00  1.00E+00  1.00E+00
+                                 h0,depo =   1.00E+00  1.00E+00  1.00E+00  1.00E+00
+                             h0,fugitive =   1.00E+00  1.00E+00  1.00E+00  1.00E+00
+                              h0,exhaust =   1.00E+00  1.00E+00  1.00E+00  1.00E+00
+                              h0,salt(1) =   1.00E+00  1.00E+00  1.00E+00  1.00E+00
+                              h0,salt(2) =   1.00E+00  1.00E+00  1.00E+00  1.00E+00
+                               h0,q_road =   0.00E+00  1.00E+00  1.00E+00  1.00E+00
+----------------------------------------------------------------
+Road suspension                                 	                        	                        	                        	                        	
+----------------------------------------------------------------
+                              Heavy (he) =   2.50E-05  2.50E-05  2.50E-05
+                              Light (li) =   2.50E-06  2.50E-06  2.50E-06
+ fsus=fsus0*(a1+a2*(max[V,Vmin]/Vref)a3) =   0.00E+00  1.00E+00  1.00E+00  5.00E+01  0.00E+00
+----------------------------------------------------------------
+Abrasion factor                                 	                        	                        	                        	                        	
+----------------------------------------------------------------
+                              Heavy (he) =   1.00E-05  1.00E-05  1.00E-05
+                              Light (li) =   1.00E-06  1.00E-06  1.00E-06
+   Reference speed Vref,abrasion (km/hr) =   6.00E+01
+                             h0,abrasion =   1.00E-02  1.00E+00  0.00E+00  0.00E+00
+----------------------------------------------------------------
+Crushing factor                                 	                        	                        	                        	                        	
+----------------------------------------------------------------
+                              Heavy (he) =   1.00E-05  1.00E-05  1.00E-05
+                              Light (li) =   1.00E-06  1.00E-06  1.00E-06
+   Reference speed Vref,crushing (km/hr) =   6.00E+01
+                             h0,crushing =   1.00E-02  1.00E+00  1.00E+00  0.00E+00
+----------------------------------------------------------------
+Sources participating in abrasion and crushing  	                        	                        	                        	                        	
+----------------------------------------------------------------
+                             p0,roadwear =   1.00E+00  1.00E+00
+                             p0,tyrewear =   0.00E+00  0.00E+00
+                            p0,brakewear =   0.00E+00  0.00E+00
+                                 p0,sand =   1.00E+00  1.00E+00
+                                 p0,depo =   1.00E+00  1.00E+00
+                             p0,fugitive =   1.00E+00  1.00E+00
+                              p0,exhaust =   0.00E+00  0.00E+00
+                              p0,salt(1) =   0.00E+00  0.00E+00
+                              p0,salt(2) =   0.00E+00  0.00E+00
+----------------------------------------------------------------
+Direct emission factor                          	                        	                        	                        	                        	
+----------------------------------------------------------------
+                         f0,dir-roadwear =   1.00E+00
+                         f0,dir-tyrewear =   1.00E+00
+                        f0,dir-brakewear =   1.00E+00
+                         f0,dir-crushing =   0.00E+00
+                         f0,dir-abrasion =   0.00E+00
+                          f0,dir-exhaust =   9.80E-01
+----------------------------------------------------------------
+Fractional size distribution                    	                        	                        	                        	                        	
+----------------------------------------------------------------
+                            fPM,roadwear =   1.00E+00  1.00E+00  2.80E-01  1.40E-02
+                            fPM,tyrewear =   1.00E+00  1.00E+00  1.00E-01  1.00E-02
+                           fPM,brakewear =   1.00E+00  1.00E+00  8.00E-01  5.00E-01
+                                fPM,sand =   1.00E+00  2.00E-02  4.00E-03  1.60E-03
+                                fPM,depo =   1.00E+00  1.00E+00  2.00E-01  4.00E-02
+                            fPM,fugitive =   1.00E+00  1.00E+00  2.80E-01  2.80E-02
+                             fPM,exhaust =   1.00E+00  1.00E+00  1.00E+00  1.00E+00
+                             fPM,salt(1) =   1.00E+00  1.00E+00  2.80E-01  1.40E-02
+                             fPM,salt(2) =   1.00E+00  1.00E+00  2.80E-01  1.40E-02
+                            fPM,crushing =   1.00E+00  1.00E+00  1.00E+00  2.00E-01
+                            fPM,abrasion =   1.00E+00  1.00E+00  1.00E+00  2.00E-01
+Reference speed Vref,PM-fraction (km/hr) =   5.00E+01
+                  cPM-fraction (km/hr)-1 =   1.20E-02
+----------------------------------------------------------------
+Wind blown dust emission factors                	                        	                        	                        	                        	
+----------------------------------------------------------------
+                              twind (hr) =   1.20E+01
+                          FFthresh (m/s) =   5.00E+00
+----------------------------------------------------------------
+Activity efficiency factors for dust and salt   	                        	                        	                        	                        	
+----------------------------------------------------------------
+                          hploughing-eff =   1.00E-02  1.00E-02  1.00E-02  1.00E-02
+                           hcleaning-eff =   1.00E-03  1.00E-03  1.00E-03  1.00E-03
+                           hdrainage-eff =   1.00E-02  1.00E-02  1.00E-02  1.00E-02
+                           hspraying-eff =   1.00E-01  1.00E-01  1.00E-01  1.00E-01
+                          hploughing-eff =   3.00E-01  3.00E-01
+                           hcleaning-eff =   2.00E-01  2.00E-01
+                           hdrainage-eff =   1.00E+00  1.00E+00
+                           hspraying-eff =   1.00E+00  1.00E+00
+----------------------------------------------------------------
+Deposition velocity                             	                        	                        	                        	                        	
+----------------------------------------------------------------
+                                wx (m/s) =   3.00E-03  1.00E-03  5.00E-04
+----------------------------------------------------------------
+Concentration conversion limit values           	                        	                        	                        	                        	
+----------------------------------------------------------------
+           NOX,concentration-min (µg/m3) =   5.00E+00
+              NOX,emission-min (g/km/hr) =   5.00E+01
+----------------------------------------------------------------
+Spray and splash factors                        	                        	                        	                        	                        	
+----------------------------------------------------------------
+                   f0,spray (veh-1) (he) =   7.80E-04  7.80E-05  7.80E-06
+                   f0,spray (veh-1) (li) =   1.30E-04  1.30E-05  1.30E-06
+                     Vref,spray  (km/hr) =   8.00E+01  8.00E+01  8.00E+01
+                groad,sprayable-min (mm) =   5.00E-02  5.00E-02  5.00E-02
+       Power law factor for spray aspray =   2.00E+00  2.00E+00  2.00E+00
+                  Vthresh,spray  (km/hr) =   2.00E+01  2.00E+01  2.00E+01
+----------------------------------------------------------------
+Drainage parameters                             	                        	                        	                        	                        	
+----------------------------------------------------------------
+                         gdrainable (mm) =   5.00E-01  2.50E-01
+              Snow retainment limit (mm) =   2.00E+00
+                 Drainage time scale(hr) =   6.00E+00
+----------------------------------------------------------------
+Ploughing parameters                            	                        	                        	                        	                        	
+----------------------------------------------------------------
+   Ploughing efficiency for snow removal =   5.00E-01  8.00E-01  3.00E-01
+                Ploughing threshold (mm) =   1.00E+02  3.00E+00  3.00E+00
+----------------------------------------------------------------
+Energy balance parameters                       	                        	                        	                        	                        	
+----------------------------------------------------------------
+                 groad,evap-thresh  (mm) =   2.00E-02
+                   Roughness length (mm) =   1.00E+00
+                             Snow albedo =   4.00E-01
+                Suburface slab depth (m) =   0.00E+00
+     Suburf temperature average time (h) =   7.20E+01
+                   Subsurface parameters =   2.40E+03  8.00E+02  2.00E+00
+                       atraffic  (veh-1) =   1.00E-02  1.00E-03
+                     Hveh  (W m-2 veh-1) =   3.00E+01  1.00E+01
+----------------------------------------------------------------
+Retention parameters                            	                        	                        	                        	                        	
+----------------------------------------------------------------
+                  gretention-thresh (mm) =   6.00E-02  5.00E-01  2.50E+02
+                     gretention-min (mm) =   2.00E-02  3.00E-01  5.00E+01
+----------------------------------------------------------------
+Surface texture parameters                      	                        	                        	                        	                        	
+----------------------------------------------------------------
+                         gdrainable (mm) =   1.00E+00
+                    f0,suspension(veh-1) =   1.00E+00
+                        f0,spray (veh-1) =   1.00E+00
+                    hdrainage-eff (dust) =   1.00E+00
+                    hspraying-eff (dust) =   1.00E+00
+----------------------------------------------------------------
+Road track parameters                           	                        	                        	                        	                        	
+----------------------------------------------------------------
+                               falltrack =   1.00E+00  1.00E+00  1.00E+00  1.00E-02
+                               fouttrack =   0.00E+00  5.00E-01  5.00E-01  1.00E-02
+                                fintrack =   0.00E+00  5.00E-01  5.00E-01  1.00E-02
+                               fshoulder =   0.00E+00  0.00E+00  1.00E-02  1.00E-02
+                                   fkerb =   0.00E+00  0.00E+00  1.00E-02  1.00E-02
+================================================================
+Reading model flags (read_NORTRIP_flags)
+================================================================
+                          road_wear_flag =          1
+                          tyre_wear_flag =          1
+                         brake_wear_flag =          1
+                            exhaust_flag =          1
+                    road_suspension_flag =          1
+                    dust_deposition_flag =          0
+                           abrasion_flag =          0
+                           crushing_flag =          0
+                      dust_drainage_flag =          2
+                         dust_spray_flag =          1
+                     dust_ploughing_flag =          1
+                    wind_suspension_flag =          0
+                          retention_flag =          2
+                  use_obs_retention_flag =          0
+                        water_spray_flag =          1
+                      drainage_type_flag =          2
+                   surface_humidity_flag =          2
+                  use_salt_humidity_flag =          1
+                        evaporation_flag =          1
+                      canyon_shadow_flag =          1
+                    canyon_long_rad_flag =          1
+                     use_subsurface_flag =          1
+                   use_traffic_turb_flag =          1
+                 use_salting_data_1_flag =   1.00E+00
+                 use_salting_data_2_flag =   1.00E+00
+                   use_sanding_data_flag =          1
+                 use_ploughing_data_flag =          1
+                  use_cleaning_data_flag =          1
+                   use_wetting_data_flag =          1
+                       auto_salting_flag =          0
+                       auto_binding_flag =          0
+                       auto_sanding_flag =          0
+                     auto_ploughing_flag =          1
+                      auto_cleaning_flag =          0
+                          plot_type_flag =          2
+                          save_type_flag =          0
+                           use_ospm_flag =          0
+================================================================
+Reading model auto activity parameters (read_NORTRIP_activities)
+================================================================
+----------------------------------------------------------------
+Salting (salt1+salt2)
+----------------------------------------------------------------
+                         salting_hour(1) =   5.00E+00
+                         salting_hour(2) =   2.00E+01
+                       delay_salting_day =   3.00E-01
+                       check_salting_day =   5.00E-01
+                           min_temp_salt =  -6.00E+00
+                           max_temp_salt =  -1.00E+00
+                        precip_rule_salt =   1.00E-01
+                            RH_rule_salt =   9.50E+01
+                          g_salting_rule =   2.00E-01
+                               salt_mass =   1.00E+01
+                           salt_dilution =   2.00E-01
+                  salt_type_distribution =   1.00E+00
+----------------------------------------------------------------
+Sanding
+----------------------------------------------------------------
+                         sanding_hour(1) =   5.00E+00
+                         sanding_hour(2) =   5.00E+00
+                       delay_sanding_day =   5.00E+00
+                       check_sanding_day =   5.00E-01
+                           min_temp_sand =  -1.20E+01
+                           max_temp_sand =  -4.00E+00
+                        precip_rule_sand =   1.00E-01
+                            RH_rule_sand =   0.00E+00
+                          g_sanding_rule =   1.00E-01
+                               sand_mass =   2.50E+02
+                           sand_dilution =   0.00E+00
+----------------------------------------------------------------
+Snow ploughing
+----------------------------------------------------------------
+                    delay_ploughing_hour =   3.00E+00
+WARNING: No value found for "ploughing_thresh" in input files. Setting to 0
+----------------------------------------------------------------
+Cleaning
+----------------------------------------------------------------
+                     delay_cleaning_hour =   7.20E+01
+                       min_temp_cleaning =   0.00E+00
+                      clean_with_salting =          0
+                    start_month_cleaning =   1.10E+01
+                      end_month_cleaning =   4.00E+00
+                   wetting_with_cleaning =   6.00E-01
+                  efficiency_of_cleaning =   1.00E-01
+----------------------------------------------------------------
+Binding (salt2)
+----------------------------------------------------------------
+                         binding_hour(1) =   2.00E+00
+                         binding_hour(2) =   6.00E+00
+                       delay_binding_day =   2.90E+00
+                       check_binding_day =   2.50E-01
+                        min_temp_binding =  -3.00E+01
+                        max_temp_binding =   2.50E+01
+                     precip_rule_binding =   1.00E-01
+                         RH_rule_binding =   4.00E+01
+                          g_binding_rule =   5.00E-02
+                            binding_mass =   5.00E+00
+                        binding_dilution =   2.00E-01
+                     start_month_binding =   1.10E+01
+                       end_month_binding =   4.00E+00
+================================================================
+Reading road metadata file (read_NORTRIP_inputdata)
+================================================================
+ Filename= C:\NORTRIP\NORTRIP_model_public_v3_2\input_data\text\NORTRIP_input_data_example_metadata.txt
+                         Number of roads =            1        STRING NOT FOUND, SET TO DEFAULT
+                            Missing data =   -9.900E+01
+         Hours between saving init files =            0        STRING NOT FOUND, SET TO DEFAULT
+                        Calculation type = Normal        STRING NOT FOUND, SET TO DEFAULT
+                Grid x lower left corner =   -9.900E+01        STRING NOT FOUND, SET TO DEFAULT
+                Grid y lower left corner =   -9.900E+01        STRING NOT FOUND, SET TO DEFAULT
+                          Grid x spacing =   -9.900E+01        STRING NOT FOUND, SET TO DEFAULT
+                          Grid y spacing =   -9.900E+01        STRING NOT FOUND, SET TO DEFAULT
+                       Grid x dimensions =            0        STRING NOT FOUND, SET TO DEFAULT
+                       Grid y dimensions =            0        STRING NOT FOUND, SET TO DEFAULT
+                                 Road ID =            0        STRING NOT FOUND, SET TO DEFAULT
+                              Road width =    1.500E+01
+                           Driving cycle =            1
+                           Pavement type =            1
+                               Road type =            1        STRING NOT FOUND, SET TO DEFAULT
+                         Number of lanes =            4
+                           Width of lane =    3.500E+00
+                     Street canyon width =    2.300E+01
+              Street canyon height north =    2.500E+01
+              Street canyon height north =    2.500E+01
+              Street canyon height south =    2.400E+01
+                      Street orientation =    7.600E+01
+                            Street slope =    0.000E+00
+                                Latitude =    5.917E+01
+                               Longitude =    1.830E+01
+                               Elevation =    0.000E+00
+                         Height obs wind =    2.000E+00
+                  Height obs temperature =    2.000E+00
+            Height obs other temperature =    0.250E+02        STRING NOT FOUND, SET TO DEFAULT
+                          Surface albedo =    1.500E-01
+                         Time difference =   -1.000E+00
+                        Surface pressure =    1.000E+03
+                   Wind speed correction =    5.000E-01
+               Observed moisture cut off =    1.500E+00
+          Suspension rate scaling factor =    1.000E+00
+                 Surface texture scaling =    1.000E+00
+       Choose receptor position for ospm =            1
+     Street canyon length north for ospm =    1.000E+02
+     Street canyon length south for ospm =    1.000E+02
+                  f_roof factor for ospm =    4.000E-01
+                Receptor height for ospm =    2.000E+00
+                  f_turb factor for ospm =    6.000E-01
+                         Exhaust EF (he) =    0.000E+00
+                         Exhaust EF (li) =    0.000E+00
+                             NOX EF (he) =    0.000E+00
+                             NOX EF (li) =    0.000E+00
+                          Save road data =            1        STRING NOT FOUND, SET TO DEFAULT
+                    Save as line or grid =            1        STRING NOT FOUND, SET TO DEFAULT
+                        Road position x1 =    0.000E+00        STRING NOT FOUND, SET TO DEFAULT
+                        Road position y1 =    0.000E+00        STRING NOT FOUND, SET TO DEFAULT
+                        Road position x2 =    0.000E+00        STRING NOT FOUND, SET TO DEFAULT
+                        Road position y2 =    0.000E+00        STRING NOT FOUND, SET TO DEFAULT
+                  road_type_salting_flag =            1        STRING NOT FOUND, SET TO DEFAULT
+                  road_type_binding_flag =            1        STRING NOT FOUND, SET TO DEFAULT
+                  road_type_sanding_flag =            1        STRING NOT FOUND, SET TO DEFAULT
+                 road_type_cleaning_flag =            1        STRING NOT FOUND, SET TO DEFAULT
+                road_type_ploughing_flag =            1        STRING NOT FOUND, SET TO DEFAULT
+                              Start date = 01.10.2010 01:00
+                         Start save date = 01.11.2010 01:00
+                                End date = 
+                           End save date = 31.05.2011 23:00
+================================================================
+Reading road initial conditions file (read_NORTRIP_inputdata)
+================================================================
+ Filename= C:\NORTRIP\NORTRIP_model_public_v3_2\input_data\text\NORTRIP_input_data_example_initial.txt
+                            M2_dust_road =    1.000E+01
+                            M2_sand_road =    0.000E+00
+                        M2_salt_road(na) =    0.000E+00
+                        M2_salt_road(mg) =    0.000E+00
+                       M2_salt_road(cma) =    0.000E+00        STRING NOT FOUND, SET TO DEFAULT
+                        M2_salt_road(ca) =    0.000E+00        STRING NOT FOUND, SET TO DEFAULT
+                              water_road =    1.000E-01
+                               snow_road =    1.000E-01
+                                ice_road =    0.000E+00
+                      long_rad_in_offset =    0.000E+00
+                               RH_offset =    0.000E+00
+                             T_2m_offset =    0.000E+00
+================================================================
+Reading model traffic date input data (read_NORTRIP_inputdata)
+================================================================
+ Filename= C:\NORTRIP\NORTRIP_model_public_v3_2\input_data\text\NORTRIP_input_data_example_traffic.txt
+ Number of columns=           16
+ Number of rows=         8760
+ Number of roads=            1
+ Number of dates=         8760
+                       Parameter   First value    Last value    Mean value
+----------------------------------------------------------------
+                            Year       2010.00       2011.00       2010.49
+                           Month          7.00          6.00          6.53
+                             Day          1.00         30.00         15.72
+                            Hour          0.00         23.00         11.50
+                          Minute          0.00          0.00          0.00
+                        N(total)        517.60        689.40        937.07
+                           N(he)         15.50         20.70         28.11
+                           N(li)        502.10        668.70        908.96
+                        N(st,he)          0.00          0.00          0.00
+                        N(st,li)          0.00          0.00        114.92
+                        N(wi,he)          0.00          0.00          0.00
+                        N(wi,li)          0.00          0.00        224.38
+                        N(su,he)         15.50         20.70         28.13
+                        N(su,li)        502.10        668.70        569.65
+                V_veh(he)(km/hr)         27.20         49.40         44.80
+                V_veh(li)(km/hr)         27.20         49.40         44.80
+----------------------------------------------------------------
+  Matching index:    1   1                            Year                            Year
+  Matching index:    2   2                           Month                           Month
+  Matching index:    3   3                             Day                             Day
+  Matching index:    4   4                            Hour                            Hour
+  Matching index:    5   5                          Minute                          Minute
+ No match found for index:            6 N(total)
+ No match found for index:            7 N(he)
+ No match found for index:            8 N(li)
+ No match found for index:            9 N(st,he)
+ No match found for index:           10 N(st,li)
+ No match found for index:           11 N(wi,he)
+ No match found for index:           12 N(wi,li)
+ No match found for index:           13 N(su,he)
+ No match found for index:           14 N(su,li)
+ No match found for index:           15 V_veh(he)(km/hr)
+ No match found for index:           16 V_veh(li)(km/hr)
+================================================================
+Reading model traffic input data (read_NORTRIP_inputdata)
+================================================================
+ Filename= C:\NORTRIP\NORTRIP_model_public_v3_2\input_data\text\NORTRIP_input_data_example_traffic.txt
+ Number of columns=           16
+ Number of rows=         8760
+ Number of roads=            1
+ Number of dates=         8760
+                       Parameter   First value    Last value    Mean value
+----------------------------------------------------------------
+                            Year       2010.00       2011.00       2010.49
+                           Month          7.00          6.00          6.53
+                             Day          1.00         30.00         15.72
+                            Hour          0.00         23.00         11.50
+                          Minute          0.00          0.00          0.00
+                        N(total)        517.60        689.40        937.07
+                           N(he)         15.50         20.70         28.11
+                           N(li)        502.10        668.70        908.96
+                        N(st,he)          0.00          0.00          0.00
+                        N(st,li)          0.00          0.00        114.92
+                        N(wi,he)          0.00          0.00          0.00
+                        N(wi,li)          0.00          0.00        224.38
+                        N(su,he)         15.50         20.70         28.13
+                        N(su,li)        502.10        668.70        569.65
+                V_veh(he)(km/hr)         27.20         49.40         44.80
+                V_veh(li)(km/hr)         27.20         49.40         44.80
+----------------------------------------------------------------
+ No match found for index:            1 Year
+ No match found for index:            2 Month
+ No match found for index:            3 Day
+ No match found for index:            4 Hour
+ No match found for index:            5 Minute
+  Matching index:    1   6                        N(total)                        N(total)
+  Matching index:    2   7                           N(he)                           N(he)
+  Matching index:    3   8                           N(li)                           N(li)
+  Matching index:    4   9                        N(st,he)                        N(st,he)
+  Matching index:    7  10                        N(st,li)                        N(st,li)
+  Matching index:    5  11                        N(wi,he)                        N(wi,he)
+  Matching index:    8  12                        N(wi,li)                        N(wi,li)
+  Matching index:    6  13                        N(su,he)                        N(su,he)
+  Matching index:    9  14                        N(su,li)                        N(su,li)
+  Matching index:   10  15                       V_veh(he)                V_veh(he)(km/hr)
+  Matching index:   11  16                       V_veh(li)                V_veh(li)(km/hr)
+================================================================
+Reading model meteorological input data (read_NORTRIP_inputdata)
+================================================================
+ Filename= C:\NORTRIP\NORTRIP_model_public_v3_2\input_data\text\NORTRIP_input_data_example_meteorology.txt
+ Number of columns=           14
+ Number of rows=         8760
+ Number of roads=            1
+ Number of dates=         8760
+                       Parameter   First value    Last value    Mean value
+----------------------------------------------------------------
+                            Year       2010.00       2011.00       2010.49
+                           Month          7.00          6.00          6.53
+                             Day          1.00         30.00         15.72
+                            Hour          0.00         23.00         11.50
+                          Minute          0.00          0.00          0.00
+                          T2m(C)         18.32         19.35          7.53
+                         FF(m/s)          3.12          2.19          3.81
+                         DD(deg)        236.20        271.40        201.32
+                           RH(%)         60.25         85.87         73.71
+                     Rain(mm/hr)          0.00          0.00          0.03
+                     Snow(mm/hr)          0.00          0.00          0.01
+          Global radiation(W/m2)          0.00          0.00        124.65
+     Road surface temperature(C)         20.82         21.75          8.07
+                Road wetness(mV)          0.01          0.00          1.33
+----------------------------------------------------------------
+ No match found for index:            1 Year
+ No match found for index:            2 Month
+ No match found for index:            3 Day
+ No match found for index:            4 Hour
+ No match found for index:            5 Minute
+  Matching index:    1   6                             T2m                          T2m(C)
+  Matching index:    3   7                              FF                         FF(m/s)
+  Matching index:    4   8                              DD                         DD(deg)
+  Matching index:    5   9                              RH                           RH(%)
+  Matching index:    6  10                            Rain                     Rain(mm/hr)
+  Matching index:    7  11                            Snow                     Snow(mm/hr)
+  Matching index:    8  12                Global radiation          Global radiation(W/m2)
+  Matching index:   12  13        Road surface temperature     Road surface temperature(C)
+  Matching index:   13  14                    Road wetness                Road wetness(mV)
+================================================================
+Reading model activity input data (read_NORTRIP_inputdata)
+================================================================
+ Filename= C:\NORTRIP\NORTRIP_model_public_v3_2\input_data\text\NORTRIP_input_data_example_activity.txt
+ Number of columns=           12
+ Number of rows=         8760
+ Number of roads=            1
+ Number of dates=         8760
+                       Parameter   First value    Last value    Mean value
+----------------------------------------------------------------
+                            Year       2010.00       2011.00       2010.49
+                           Month          7.00          6.00          6.53
+                             Day          1.00         30.00         15.72
+                            Hour          0.00         23.00         11.50
+                          Minute          0.00          0.00          0.00
+                 M_sanding(g/m2)          0.00          0.00          0.91
+             M_salting(na)(g/m2)          0.00          0.00          0.12
+             M_salting(mg)(g/m2)          0.00          0.00          0.00
+             Ploughing_road(0/1)          0.00          0.00          0.00
+              Cleaning_road(0/1)          0.00          0.00          0.00
+                     Wetting(mm)          0.00          0.00          0.00
+                M_fugitive(g/m2)          0.00          0.00          0.00
+----------------------------------------------------------------
+  Matching index:    8   1                            Year                            Year
+  Matching index:    9   2                           Month                           Month
+  Matching index:   10   3                             Day                             Day
+  Matching index:   11   4                            Hour                            Hour
+  Matching index:   12   5                          Minute                          Minute
+  Matching index:    1   6                       M_sanding                 M_sanding(g/m2)
+  Matching index:    5   7                   M_salting(na)             M_salting(na)(g/m2)
+  Matching index:    6   8                   M_salting(mg)             M_salting(mg)(g/m2)
+  Matching index:    2   9                  Ploughing_road             Ploughing_road(0/1)
+  Matching index:    3  10                   Cleaning_road              Cleaning_road(0/1)
+  Matching index:    4  11                         Wetting                     Wetting(mm)
+  Matching index:    7  12                      M_fugitive                M_fugitive(g/m2)
+================================================================
+Reading model airquality input data (read_NORTRIP_inputdata)
+================================================================
+ Filename= C:\NORTRIP\NORTRIP_model_public_v3_2\input_data\text\NORTRIP_input_data_example_airquality.txt
+ Number of columns=           13
+ Number of rows=         8760
+ Number of roads=            1
+ Number of dates=         8760
+                       Parameter   First value    Last value    Mean value
+----------------------------------------------------------------
+                            Year       2010.00       2011.00       2010.49
+                           Month          7.00          6.00          6.53
+                             Day          1.00         30.00         15.72
+                            Hour          0.00         23.00         11.50
+                          Minute          0.00          0.00          0.00
+                 PM10_obs(ug/m3)         21.62         25.13         23.64
+          PM10_background(ug/m3)          6.21         21.31          8.85
+                 PM25_obs(ug/m3)          5.48          9.99          0.73
+          PM25_background(ug/m3)          2.72         10.52        -11.59
+                  NOX_obs(ug/m3)         33.95         34.42        104.38
+           NOX_background(ug/m3)          5.78          9.38         15.35
+               NOX_emis(g/km/hr)        370.72        493.77        671.16
+                EP_emis(g/km/hr)          9.32         12.41         16.87
+----------------------------------------------------------------
+ No match found for index:            1 Year
+ No match found for index:            2 Month
+ No match found for index:            3 Day
+ No match found for index:            4 Hour
+ No match found for index:            5 Minute
+  Matching index:    1   6                        PM10_obs                 PM10_obs(ug/m3)
+  Matching index:    2   7                 PM10_background          PM10_background(ug/m3)
+  Matching index:    4   8                        PM25_obs                 PM25_obs(ug/m3)
+  Matching index:    5   9                 PM25_background          PM25_background(ug/m3)
+  Matching index:    7  10                         NOX_obs                  NOX_obs(ug/m3)
+  Matching index:    8  11                  NOX_background           NOX_background(ug/m3)
+  Matching index:   10  12                        NOX_emis               NOX_emis(g/km/hr)
+  Matching index:   11  13                         EP_emis                EP_emis(g/km/hr)
+================================================================
+Processing activity data
+----------------------------------------------------------------
+Number of activity dates same as input data dates:         8760
+================================================================
+Checking input data for road 1 only
+----------------------------------------------------------------
+Input traffic data available (%)
+                        N(total) 100.0      81.2    2386.0
+                           N(he) 100.0       2.4      71.6
+                           N(li) 100.0      78.8    2314.4
+                        N(st,he) 100.0       0.0       0.0
+                        N(wi,he) 100.0       0.0       0.0
+                        N(su,he) 100.0       2.4      71.6
+                        N(st,li) 100.0       0.0     593.1
+                        N(wi,li) 100.0       0.0    1438.0
+                        N(su,li) 100.0       0.0    2314.4
+                       V_veh(he) 100.0      18.3      60.7
+                       V_veh(li) 100.0      18.3      60.7
+----------------------------------------------------------------
+Input meteo data available (%) with min and max
+                             T2m 100.0     -17.6      32.2
+                            T25m   0.0     -99.0     -99.0
+                              FF 100.0       0.0      13.3
+                              DD 100.0       0.0     360.0
+                              RH 100.0      17.1     100.0
+                            Rain 100.0       0.0      16.0
+                            Snow 100.0       0.0       2.6
+                Global radiation 100.0       0.0     937.0
+              Longwave radiation   0.0     -99.0     -99.0
+       Global clearsky radiation   0.0     -99.0     -99.0
+                     Cloud cover   0.0     -99.0     -99.0
+        Road surface temperature 100.0     -13.1      39.8
+                    Road wetness 100.0       0.0       3.8
+                        Pressure   0.0     -99.0     -99.0
+                    T2m dewpoint   0.0     -99.0     -99.0
+                           T_sub   0.0     -99.0     -99.0
+----------------------------------------------------------------
+Input activity data available (%)
+                       M_sanding 100.0       0.0     400.0
+                  Ploughing_road 100.0       0.0       0.0
+                   Cleaning_road 100.0       0.0       0.0
+                         Wetting 100.0       0.0       0.1
+                       M_salting 100.0       0.0      30.0
+                       M_salting 100.0       0.0       0.0
+                      M_fugitive 100.0       0.0       0.0
+----------------------------------------------------------------
+Input air quality data available (%)
+                        PM10_obs  94.9     -99.0     574.5
+                 PM10_background  95.7     -99.0     143.1
+                        PM10_net   0.0     -99.0     -99.0
+                        PM25_obs  91.8     -99.0      61.1
+                 PM25_background  83.1     -99.0      47.5
+                        PM25_net   0.0     -99.0     -99.0
+                         NOX_obs  99.5     -99.0    1074.0
+                  NOX_background  99.8     -99.0     331.6
+                         NOX_net   0.0     -99.0     -99.0
+                        NOX_emis 100.0      58.2    1708.9
+                         EP_emis 100.0       1.5      42.9
+                        Disp_fac   0.0     -99.0     -99.0
+================================================================
+
+Setting time parameters (NORTRIP_initialise_time)
+================================================================
+              Min date:         01.07.2010 00:00     1
+              Max date:         30.06.2011 23:00  8760
+            Start date:         01.10.2010 01:00  2210
+              End date:         30.06.2011 23:00  8760
+       Start save date:         01.11.2010 01:00  2953
+         End save date:         31.05.2011 23:00  8040
+     Time step (hours):    1.0
+----------------------------------------------------------------
+
+================================================================
+Starting calculations (NORTRIP_main_run)
+================================================================
+
+Calculating radiation (NORTRIP_calc_radiation)
+================================================================
+              Global radiation available =  T
+            Longwave radiation available =  F
+                   Cloud cover available =  F
+----------------------------------------------------------------
+             Radiation parameter     Min value     Max value    Mean value
+----------------------------------------------------------------
+                    short_rad_in          0.00        937.00        109.00
+                   short_rad_net          0.00        585.79         42.66
+          short_rad_net_clearsky          0.00        751.98        134.70
+                 shadow_fraction          0.00          1.00          0.96
+            short_rad_net_direct          0.00        309.01          6.67
+           short_rad_net_diffuse          0.00        528.94         35.99
+                     long_rad_in        192.72        408.43        294.84
+                     cloud_cover          0.00          1.00          0.45
+----------------------------------------------------------------
+
+Initialising variables (NORTRIP_main_run/NORTRIP_initialise_data)
+================================================================
+   Wind speed correction factor         0.50
+                      RH offset         0.00
+             Temperature offset         0.00
+      Longwave radiation offset         0.00
+----------------------------------------------------------------
+ WARNING: Not reading data from init file
+
+Calculating subsurface temperature (NORTRIP_running_mean_temperature)
+================================================================
+                         T_sub available =  F
+----------------------------------------------------------------
+           Temperature parameter     Min value     Max value    Mean value
+----------------------------------------------------------------
+                             T_a        -17.62         28.58          4.18
+                           T_sub        -10.01         21.18          4.03
+----------------------------------------------------------------
+Starting time loop (NORTRIP_main_run)
+Calculating dispersion using NOX
+Calculating concentrations
+================================================================
+Displaying summary results for road =            1
+================================================================
+--------------------------------------------------------------------------------
+Sum road dust PM200 mass balance production and sink (g/m^2): Road=     1 Track= 1
+--------------------------------------------------------------------------------
+  Roadwear  Tyrewear Brakewear   Exhaust  Fugitive      Sand      Depo  Abrasion  Crushing  Suspens.  Drainage     Spray  Cleaning      Wind
+   102.045    12.751     0.597     0.116     0.000**********     0.000     0.000     0.000  -101.725   -28.694  -103.239     0.000     0.000
+--------------------------------------------------------------------------------
+Mean energy budget (W/m^2): Road =     1 Track = 1
+--------------------------------------------------------------------------------
+    SW_net    LW_net   Rad_net    H_flux    L_flux  Veh_flux    G_flux Gsub_flux
+    34.245   -26.109     8.124    -1.187    -3.341     0.318     3.662    -3.382
+--------------------------------------------------------------------------------
+Road moisture balance (mm/day): Road =     1 Track = 1
+--------------------------------------------------------------------------------
+      Rain     Drain       R-D      Evap      Cond      Melt    Freeze     Spray   Wetting
+    0.2943   -0.2538    0.0405   -0.1100    0.0249    0.0957   -0.0305   -0.0185    0.0191
+--------------------------------------------------------------------------------
+Traffic and activity data: Road =     1 Track = 1
+--------------------------------------------------------------------------------
+      Days       ADT      %_HE      V_LI      V_HE       %ST   %ST_max S1(kg/km) S2(kg/km)      n_S1      n_S2    n_sand   n_clean  n_plough
+     211.9   21279.0       3.0      43.6      43.6      22.3      36.0   14140.0       0.0      86.0       0.0      29.0       0.0      21.0
+--------------------------------------------------------------------------------
+Mean meteorological data: Road =     1 Track = 1
+--------------------------------------------------------------------------------
+     T_air    T_road    RH_air     SW_in    Clouds      Rain      Snow  f_precip     f_wet     f_dis
+     1.846     2.029    75.483    91.712    47.696    62.400    88.900     6.741    60.476     0.158
+--------------------------------------------------------------------------------
+Mean source contribution to PM10 concentrations or emissions (ug/m^3) or (g/km/hr) : Road =     1 Track = 1
+--------------------------------------------------------------------------------
+ Obs_total Mod_total      Road      Tyre     Brake      Sand   Salt(1)   Salt(2)   Exhaust  Fugitive      Depo    Direct       Sus      Wind
+    21.744    19.016     9.240     0.578     1.174     4.324     1.202     0.000     2.498     0.000     0.000     8.926    10.089     0.000
+--------------------------------------------------------------------------------
+Mean source contribution to PM2.5 concentrations or emissions (ug/m^3) or (g/km/hr): Road =     1 Track = 1
+--------------------------------------------------------------------------------
+ Obs_total Mod_total      Road      Tyre     Brake      Sand   Salt(1)   Salt(2)   Exhaust  Fugitive      Depo    Direct       Sus      Wind
+     4.359     5.137     0.400     0.050     0.711     1.503     0.050     0.000     2.423     0.000     0.000     3.300     1.838     0.000
+--------------------------------------------------------------------------------
+Statistics for PM10 concentrations (ug/m^3): Road =     1 Track = 1
+--------------------------------------------------------------------------------
+  Mean_obs  Mean_mod   90p_obs   90p_mod    SD_obs    SD_mod        R2      RMSE    NRMSE%       FB%
+    21.744    16.881    56.283    47.948    35.406    28.789     0.504    25.609   117.775   -13.821
+--------------------------------------------------------------------------------
+Statistics for PM2.5 concentrations (ug/m^3): Road =     1 Track = 1
+--------------------------------------------------------------------------------
+  Mean_obs  Mean_mod   90p_obs   90p_mod    SD_obs    SD_mod        R2      RMSE    NRMSE%       FB%
+     4.359     4.993     8.189    11.159     3.046     5.675     0.323     4.786   109.811    15.569
+
+================================================================
+Finished calculations (NORTRIP_main_run)
+================================================================
+----------------------------------------------------------------
+Saving data to file
+----------------------------------------------------------------
+ Saving to: C:\NORTRIP\NORTRIP_model_public_v3_2\fortran\output\NORTRIP_fortran_output_date_data.txt
+ Saving to: C:\NORTRIP\NORTRIP_model_public_v3_2\fortran\output\NORTRIP_fortran_output_M_road_data.txt
+ Saving to: C:\NORTRIP\NORTRIP_model_public_v3_2\fortran\output\NORTRIP_fortran_output_M_road_balance_data.txt
+ Saving to: C:\NORTRIP\NORTRIP_model_public_v3_2\fortran\output\NORTRIP_fortran_output_C_data.txt
+ Saving to: C:\NORTRIP\NORTRIP_model_public_v3_2\fortran\output\NORTRIP_fortran_output_E_road_data.txt
+ Saving to: C:\NORTRIP\NORTRIP_model_public_v3_2\fortran\output\NORTRIP_fortran_output_WR_time_data.txt
+ Saving to: C:\NORTRIP\NORTRIP_model_public_v3_2\fortran\output\NORTRIP_fortran_output_road_salt_data.txt
+ Saving to: C:\NORTRIP\NORTRIP_model_public_v3_2\fortran\output\NORTRIP_fortran_output_road_meteo_data.txt
+ Saving to: C:\NORTRIP\NORTRIP_model_public_v3_2\fortran\output\NORTRIP_fortran_output_g_road_balance_data.txt
+ Saving to: C:\NORTRIP\NORTRIP_model_public_v3_2\fortran\output\NORTRIP_fortran_output_g_road_data.txt
+ Saving to: C:\NORTRIP\NORTRIP_model_public_v3_2\fortran\output\NORTRIP_fortran_output_f_q.txt
+ Saving to: C:\NORTRIP\NORTRIP_model_public_v3_2\fortran\output\NORTRIP_fortran_output_f_q_obs.txt
+ Saving to: C:\NORTRIP\NORTRIP_model_public_v3_2\fortran\output\NORTRIP_fortran_output_traffic_data.txt
+ Saving to: C:\NORTRIP\NORTRIP_model_public_v3_2\fortran\output\NORTRIP_fortran_output_meteo_data.txt
+ Saving to: C:\NORTRIP\NORTRIP_model_public_v3_2\fortran\output\NORTRIP_fortran_output_airquality_data.txt
+ Saving to: C:\NORTRIP\NORTRIP_model_public_v3_2\fortran\output\NORTRIP_fortran_output_activity_data.txt
